@@ -9,8 +9,8 @@ Feature: PUT Update User Profil
     And Response body message contain "<message>"
     And Validate json schema update user profil with valid parameter and valid body
     Examples:
-      | nama | email | phone | password |
-      |      |       |       |          |
+      | nama | email | phone | password | message |
+      |      |       |       |          |         |
 
   @Test @NegativeCase @Users
   Scenario: Put update user profil with valid body and wrong token should failed then return 401 response code

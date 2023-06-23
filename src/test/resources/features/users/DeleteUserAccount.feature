@@ -6,9 +6,10 @@ Feature: DELETE User Account
     Given Delete user account with valid token
     When Send request delete user account
     Then Should return status code 200
+    And Response body message contain "<message>"
     Examples:
-      | nama | email | phone | password |
-      |      |       |       |          |
+      | nama | email | phone | password | message |
+      |      |       |       |          |         |
 
   @Test @NegativeCase
   Scenario: Delete user account with wrong token should failed then return 401 response code
