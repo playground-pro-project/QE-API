@@ -9,7 +9,7 @@ import starter.PlaygroundPro.UsersAPI;
 import java.io.File;
 
 public class AuthorizationUsers {
-    public String getTokenUser() {
+    public String getTokenUserUsers() {
         File jsonRequest = new File(Constants.REQ_BODY_DIR+"Login/LoginValidUser.json");
         Response response = SerenityRest.given()
                 .contentType(ContentType.JSON)
@@ -22,4 +22,16 @@ public class AuthorizationUsers {
     }
 
     public static String WRONG_TOKEN = "wrongToken";
+
+    public String getTokenByCustomUsers(String json) {
+        Response response = SerenityRest.given()
+                .contentType(ContentType.JSON)
+                .body(json)
+                .post(UsersAPI.POST_LOGIN_USER_USERS);
+
+        JsonPath jsonPathEvaluator = response.jsonPath();
+        String token =jsonPathEvaluator.get(Constants.DATA_TOKEN);
+        System.out.println("token ini " + token);
+        return jsonPathEvaluator.get(Constants.DATA_TOKEN);
+    };
 }

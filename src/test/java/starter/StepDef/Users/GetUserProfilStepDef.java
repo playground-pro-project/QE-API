@@ -20,7 +20,7 @@ public class GetUserProfilStepDef {
     //Positive Case 1
     @Given("Get user profil with valid path")
     public void getUserProfilWithValidPath() {
-        usersAPI.getUserProfil(authorizationUsers.getTokenUser());
+        usersAPI.getUserProfilUsers(authorizationUsers.getTokenUserUsers());
     }
     @When("Send request get user profil")
     public void sendRequestGetUserProfil() {
@@ -35,7 +35,7 @@ public class GetUserProfilStepDef {
     //Negative Case 1
     @Given("Get user profil with invalid path")
     public void getUserProfilWithInvalidPath() {
-        usersAPI.getUserProfil(authorizationUsers.getTokenUser());
+        usersAPI.getUserProfilUsers(authorizationUsers.getTokenUserUsers());
     }
     @When("Send request get user profils")
     public void sendRequestGetUserProfils() {
@@ -45,7 +45,7 @@ public class GetUserProfilStepDef {
     //Negative Case 2
     @Given("Get user profil with valid path and wrong token")
     public void getUserProfilWithValidPathAndWrongToken() {
-        usersAPI.getUserProfil(AuthorizationUsers.WRONG_TOKEN);
+        usersAPI.getUserProfilUsers(AuthorizationUsers.WRONG_TOKEN);
     }
 
 }
