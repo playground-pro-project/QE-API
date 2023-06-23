@@ -18,7 +18,7 @@ public class AuthorizationUsers {
 
         JsonPath jsonPathEvaluator = response.jsonPath();
 
-        return jsonPathEvaluator.get(Constants.DATA_TOKEN);
+        return jsonPathEvaluator.get(Constants.DATA_TOKENS);
     }
 
     public static String WRONG_TOKEN = "wrongToken";
@@ -30,8 +30,8 @@ public class AuthorizationUsers {
                 .post(UsersAPI.POST_LOGIN_USER_USERS);
 
         JsonPath jsonPathEvaluator = response.jsonPath();
-        String token =jsonPathEvaluator.get(Constants.DATA_TOKEN);
+        String token =jsonPathEvaluator.get(Constants.DATA_TOKENS);
         System.out.println("token ini " + token);
-        return jsonPathEvaluator.get(Constants.DATA_TOKEN);
+        return jsonPathEvaluator.get(Constants.DATA_TOKENS);
     };
 }

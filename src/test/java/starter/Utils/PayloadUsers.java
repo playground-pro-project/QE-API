@@ -6,7 +6,7 @@ public class PayloadUsers {
         jsonString = "{";
         jsonString += "\"nama\": \"" + fullname + "\",";
         jsonString += "\"email\": \"" + email + "\",";
-        jsonString += "\"email\": \"" + phone + "\",";
+        jsonString += "\"phone\": \"" + phone + "\",";
         jsonString += "\"password\": \"" + password + "\"";
         jsonString += "}";
 
