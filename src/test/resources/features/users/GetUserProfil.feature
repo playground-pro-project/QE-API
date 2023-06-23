@@ -13,7 +13,7 @@ Feature: GET User Profil
   @Test @NegativeCase @Users
   Scenario: Get user profil with invalid path should failed then return 404 response code
     Given Get user profil with invalid path
-    When Send request get user profil
+    When Send request get user profils
     Then Should return status code 404
 
   @Test @NegativeCase @Users
