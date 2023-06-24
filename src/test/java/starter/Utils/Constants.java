@@ -8,7 +8,7 @@ public class Constants {
 
     //response body line 10-40 Faruqi
     public static String MESSAGE = "message";
-
+    public static String DATA_TOKENS = "token";
 
 
 
