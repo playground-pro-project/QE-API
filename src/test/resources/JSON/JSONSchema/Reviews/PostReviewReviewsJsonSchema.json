@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "venue_id": {
+      "type": "string"
+    },
+    "review": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "venue_id",
+    "review",
+    "rating"
+  ]
+}
