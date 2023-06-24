@@ -15,8 +15,9 @@ public class UsersAPI {
     public static String DELETE_USER_USERS = Constants.BASE_URL+"/users";
     public static String PUT_CHANGE_USER_PASSWORD_USERS = Constants.BASE_URL+"/users/password";
     public static String PUT_UPDATE_USER_PROFIL_USERS = Constants.BASE_URL+"/users";
+    public static String PUT_CHANGE_PROFIL_PICTURE_USERS = Constants.BASE_URL+"/users/profile/picture";
 
-    //GET
+    //GET USER PROFIL
     @Step("Get user profil with valid path")
     public void getUserProfilUsers(String token) {
         SerenityRest.given()
@@ -31,7 +32,7 @@ public class UsersAPI {
                 .body(json);
     }
 
-    //DELETE
+    //DELETE USER
     @Step("Delete user with wrong token")
     public void deleteUserUsers(String token) {
         SerenityRest.given()
@@ -58,6 +59,20 @@ public class UsersAPI {
                 .header("Authorization", "Bearer " + token)
                 .contentType(ContentType.JSON)
                 .body(json);
+    }
+
+    //PUT CHANGE PROFIL PICTURE
+    @Step("Put change user profil picture")
+    public void putChangeProfilPictureUsers(String token, File imageFile) {
+        SerenityRest.given()
+                .header("Authorization", "Bearer " + token)
+                .contentType(ContentType.MULTIPART_FORM_DATA)
+                .multiPart("profile_picture", imageFile);
+    }
+    @Step("Put change user profil with blank body")
+    public void putChangeProfilPictureWithBlankBody(String token) {
+        SerenityRest.given()
+                .header("Authorization", "Bearer " + token);
     }
 
 }

@@ -9,8 +9,8 @@ public class Constants {
     //response body line 10-40 Faruqi
     public static String MESSAGE = "message";
     public static String DATA_TOKENS = "token";
-
-
+    public static String IMAGE_UPLOAD_REQUEST = DIR+"/src/test/resources/images/";
+    public static String CSV_INVALID_FILE_REQUEST = DIR+"/src/test/resources/csv/";
 
 
 
