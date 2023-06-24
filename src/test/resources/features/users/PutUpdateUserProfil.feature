@@ -1,16 +1,11 @@
 Feature: PUT Update User Profil
   @Test @PositiveCase @Users
-  Scenario Outline: Put update user profil with valid token and valid body should success then return 200 response code
-    Given Add user with "<nama>" as full name, "<email>" as email, "<phone>" as phone, and "<password>" as password
-    When Send request post update user profil
+  Scenario: Put update user profil with valid token and valid body should success then return 200 response code
     Given Put update user profil with valid token
     When Send request put update user profil
     Then Should return status code 200
     And Response body message contain "<message>"
     And Validate json schema update user profil with valid parameter and valid body
-    Examples:
-      | nama | email | phone | password | message |
-      |      |       |       |          |         |
 
   @Test @NegativeCase @Users
   Scenario: Put update user profil with valid body and wrong token should failed then return 401 response code

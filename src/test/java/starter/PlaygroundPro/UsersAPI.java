@@ -14,6 +14,7 @@ public class UsersAPI {
     public static String POST_LOGIN_USER_USERS = Constants.BASE_URL+"/login";
     public static String DELETE_USER_USERS = Constants.BASE_URL+"/users";
     public static String PUT_CHANGE_USER_PASSWORD_USERS = Constants.BASE_URL+"/users/password";
+    public static String PUT_UPDATE_USER_PROFIL_USERS = Constants.BASE_URL+"/users";
 
     //GET
     @Step("Get user profil with valid path")
@@ -44,6 +45,15 @@ public class UsersAPI {
     //PUT CHANGE PASSWORD
     @Step("Put change user password")
     public void putChangeUserPasswordUsers(String token, File json) {
+        SerenityRest.given()
+                .header("Authorization", "Bearer " + token)
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+
+    //PUT UPDATE USER PROFIL
+    @Step("Put update user profil")
+    public void putUpdateUserProfil(String token, File json) {
         SerenityRest.given()
                 .header("Authorization", "Bearer " + token)
                 .contentType(ContentType.JSON)
