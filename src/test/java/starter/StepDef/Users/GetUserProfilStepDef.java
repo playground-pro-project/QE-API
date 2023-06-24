@@ -7,7 +7,7 @@ import io.restassured.module.jsv.JsonSchemaValidator;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
 import starter.PlaygroundPro.UsersAPI;
-import starter.Utils.AuthorizationUsers;
+import starter.Utils.Users.AuthorizationUsers;
 import starter.Utils.Constants;
 
 import java.io.File;

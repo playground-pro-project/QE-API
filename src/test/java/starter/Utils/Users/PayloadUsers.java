@@ -1,4 +1,4 @@
-package starter.Utils;
+package starter.Utils.Users;
 
 public class PayloadUsers {
     public String bodyRequestRegisterUsers(String fullname, String email, String phone, String password) {

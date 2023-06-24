@@ -38,7 +38,6 @@ public class Constants {
 
 
 
-
     //response body line 41-80 Derin
 
 

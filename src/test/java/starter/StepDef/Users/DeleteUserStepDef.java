@@ -5,8 +5,8 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
 import starter.PlaygroundPro.UsersAPI;
-import starter.Utils.AuthorizationUsers;
-import starter.Utils.PayloadUsers;
+import starter.Utils.Users.AuthorizationUsers;
+import starter.Utils.Users.PayloadUsers;
 
 public class DeleteUserStepDef {
     @Steps
