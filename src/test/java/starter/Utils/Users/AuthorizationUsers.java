@@ -15,7 +15,7 @@ public class AuthorizationUsers {
         Response response = SerenityRest.given()
                 .contentType(ContentType.JSON)
                 .body(jsonRequest)
-                .post(UsersAPI.GET_USER_PROFIL);
+                .post(UsersAPI.POST_LOGIN_USER_USERS);
 
         JsonPath jsonPathEvaluator = response.jsonPath();
 
