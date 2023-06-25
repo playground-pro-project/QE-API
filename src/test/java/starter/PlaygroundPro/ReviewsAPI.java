@@ -9,6 +9,7 @@ import java.io.File;
 
 public class ReviewsAPI {
     public static String DELETE_REVIEW_REVIEWS = Constants.BASE_URL+"/reviews/{review_id}";
+    public static String POST_LOGIN_USER_REVIEWS = Constants.BASE_URL+"/login";
     public static String POST_REVIEW_REVIEWS = Constants.BASE_URL+"/reviews";
 
 

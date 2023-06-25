@@ -15,7 +15,7 @@ public class AuthorizationReviews {
         Response response = SerenityRest.given()
                 .contentType(ContentType.JSON)
                 .body(jsonRequest)
-                .post(ReviewsAPI.DELETE_REVIEW_REVIEWS);
+                .post(ReviewsAPI.POST_LOGIN_USER_REVIEWS);
 
         JsonPath jsonPathEvaluator = response.jsonPath();
 
