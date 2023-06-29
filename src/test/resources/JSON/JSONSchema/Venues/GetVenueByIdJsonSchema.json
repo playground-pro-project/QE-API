@@ -2,143 +2,59 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
+    "code": {
+      "type": "integer"
+    },
+    "message": {
+      "type": "string"
+    },
     "data": {
       "type": "object",
       "properties": {
-        "venue_id": {
+        "venue_name": {
           "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "location": {
-          "type": "string"
-        },
-        "price": {
-          "type": "integer"
         },
         "category": {
           "type": "string"
         },
-        "distance": {
-          "type": "number"
+        "address": {
+          "type": "string"
         },
-        "reviews": {
-          "type": "array",
-          "items": [
-            {
-              "type": "object",
-              "properties": {
-                "user": {
-                  "type": "object",
-                  "properties": {
-                    "user_id": {
-                      "type": "string"
-                    },
-                    "full_name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "user_id",
-                    "full_name"
-                  ]
-                },
-                "review": {
-                  "type": "string"
-                },
-                "rating": {
-                  "type": "number"
-                }
-              },
-              "required": [
-                "user",
-                "review",
-                "rating"
-              ]
-            },
-            {
-              "type": "object",
-              "properties": {
-                "user": {
-                  "type": "object",
-                  "properties": {
-                    "user_id": {
-                      "type": "string"
-                    },
-                    "full_name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "user_id",
-                    "full_name"
-                  ]
-                },
-                "review": {
-                  "type": "string"
-                },
-                "rating": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "user",
-                "review",
-                "rating"
-              ]
-            }
-          ]
+        "booking_date": {
+          "type": "string"
         },
-        "venue_images": {
-          "type": "array",
-          "items": [
-            {
-              "type": "object",
-              "properties": {
-                "image_url": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "image_url"
-              ]
-            },
-            {
-              "type": "object",
-              "properties": {
-                "image_url": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "image_url"
-              ]
-            }
-          ]
+        "start": {
+          "type": "string"
+        },
+        "end": {
+          "type": "string"
+        },
+        "payment_code": {
+          "type": "string"
+        },
+        "payment_type": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
         }
       },
       "required": [
-        "venue_id",
-        "name",
-        "description",
-        "location",
-        "price",
+        "venue_name",
         "category",
-        "distance",
-        "reviews",
-        "venue_images"
+        "address",
+        "booking_date",
+        "start",
+        "end",
+        "payment_code",
+        "payment_type",
+        "status"
       ]
-    },
-    "message": {
-      "type": "string"
     }
   },
   "required": [
-    "data",
-    "message"
+    "code",
+    "message",
+    "data"
   ]
 }

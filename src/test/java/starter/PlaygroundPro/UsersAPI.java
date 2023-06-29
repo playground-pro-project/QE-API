@@ -16,7 +16,7 @@ public class UsersAPI {
     public static String PUT_CHANGE_USER_PASSWORD_USERS = Constants.BASE_URL+"/users/password";
     public static String PUT_UPDATE_USER_PROFIL_USERS = Constants.BASE_URL+"/users";
     public static String PUT_CHANGE_PROFIL_PICTURE_USERS = Constants.BASE_URL+"/users/profile-picture";
-    public static String POST_UPGRADE_USER_ROLE_USERS = Constants.BASE_URL+"/users/file";
+    public static String POST_UPGRADE_USER_ROLE_USERS = Constants.BASE_URL+"/users/upgrade";
 //    public static String TOKEN = "";
 
     //GET USER PROFIL

@@ -1,7 +1,7 @@
 Feature: PUT Update Venue
   @Test @PositiveCase @Venues
   Scenario: Put update venue with valid parameter, valid body, and valid token should success then return 200 response code
-    Given Put update venue with "VNE-ELVZWZ5T" valid parameter, valid body, and valid token
+    Given Put update venue with "VNE-M3PEOV0V" valid parameter, valid body, and valid token
     When Send request put update venue
     Then Should return status code 200
     And Response body message contain "Venue updated successfully"
@@ -9,7 +9,7 @@ Feature: PUT Update Venue
 
   @Test @NegativeCase @Venues
   Scenario: Put update venue with valid parameter, valid body, and wrong token should failed then return 401 response code
-    Given Put update venue with "VNE-ELVZWZ5T" valid parameter, valid body, and wrong token
+    Given Put update venue with "VNE-M3PEOV0V" valid parameter, valid body, and wrong token
     When Send request put update venue
     Then Should return status code 401
 
@@ -21,6 +21,6 @@ Feature: PUT Update Venue
 
   @Test @NegativeCase @Venues
   Scenario: Put update venue with valid parameter, blank body, and wrong token should failed then return 401 response code
-    Given Put update venue with "VNE-ELVZWZ5T" valid parameter, blank body, and wrong token
+    Given Put update venue with "VNE-M3PEOV0V" valid parameter, blank body, and wrong token
     When Send request put update venue
     Then Should return status code 401

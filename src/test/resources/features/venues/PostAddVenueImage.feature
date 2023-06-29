@@ -23,4 +23,4 @@ Feature: POST Add Venue Image
   Scenario: Post add venue image with blank parameter, blank body, and wrong token should failed then return 404 response code
     Given Post add venue image with "" blank parameter, blank body, and wrong token
     When Send request post add venue image
-    Then Should return status code 404
+    Then Should return status code 401

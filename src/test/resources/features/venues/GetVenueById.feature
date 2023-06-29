@@ -1,7 +1,7 @@
 Feature: GET Venue By Id
   @Test @PositiveCase @Venues
   Scenario Outline: Get venue by id with valid parameter and valid token should success then return 200 response code
-    Given Get venue by id with valid "VNE-ND6QKRHO" parameter and valid token
+    Given Get venue by id with valid "VNE-M3PEOV0V" parameter and valid token
     When Send request get venue by id
     Then Should return status code 200
     And Response body message contain "<message>"
@@ -12,7 +12,7 @@ Feature: GET Venue By Id
 
   @Test @NegativeCase @Venues
   Scenario: Get venue by id with valid parameter and wrong token should success then return 401 response code
-    Given Get venue by id with valid "VNE-ND6QKRHO" parameter and wrong token
+    Given Get venue by id with valid "VNE-M3PEOV0V" parameter and wrong token
     When Send request get venue by id
     Then Should return status code 401
 
