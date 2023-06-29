@@ -15,7 +15,7 @@ import java.io.File;
 public class GetUserProfilStepDef {
     @Steps
     UsersAPI usersAPI;
-    AuthorizationUsers authorizationUsers;
+    AuthorizationUsers authorizationUsers = new AuthorizationUsers();
 
     //Positive Case 1
     @Given("Get user profil with valid path")

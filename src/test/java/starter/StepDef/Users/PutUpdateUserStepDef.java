@@ -15,7 +15,7 @@ import java.io.File;
 public class PutUpdateUserStepDef {
     @Steps
     UsersAPI usersAPI;
-    AuthorizationUsers authorizationUsers;
+    AuthorizationUsers authorizationUsers = new AuthorizationUsers();
 
     //Positive Case 1
     @Given("Put update user profil with valid token")
@@ -38,6 +38,7 @@ public class PutUpdateUserStepDef {
     public void updateUserProfilWithValidBodyAndWrongToken() {
         File json = new File(Constants.REQ_BODY_DIR+"Users/PutUpdateUserProfil.json");
         usersAPI.putUpdateUserProfil(AuthorizationUsers.WRONG_TOKEN, json);
+//        usersAPI.putUpdateUserProfilWrongToken(authorizationUsers.getWrongToken(), json);
     }
 
     //Negative Case 2

@@ -7,8 +7,8 @@ Feature: GET User Profil
     And Response body message contain "<message>"
     And Validate json schema get user profil with valid path
     Examples:
-      | message |
-      |         |
+      | message                             |
+      | User profile retrieved successfully |
 
   @Test @NegativeCase @Users
   Scenario: Get user profil with invalid path should failed then return 404 response code

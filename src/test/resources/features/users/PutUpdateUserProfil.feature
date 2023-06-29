@@ -4,7 +4,7 @@ Feature: PUT Update User Profil
     Given Put update user profil with valid token
     When Send request put update user profil
     Then Should return status code 200
-    And Response body message contain "<message>"
+    And Response body message contain "User profile updated successfully"
     And Validate json schema update user profil with valid parameter and valid body
 
   @Test @NegativeCase @Users

@@ -4,7 +4,7 @@ Feature: PUT Change User Profile Picture
     Given Change user profile picture with valid token and valid body
     When Send request put change user profile picture
     Then Should return status code 200
-    And Response body message contain "<message>"
+    And Response body message contain "Profile picture updated successfully"
     And Validate json schema change user profile picture with valid token and valid body
 
   @Test @NegativeCase @Users

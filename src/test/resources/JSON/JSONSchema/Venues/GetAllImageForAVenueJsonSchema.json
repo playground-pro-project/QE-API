@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "image_id": {
+              "type": "string"
+            },
+            "image_link": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "image_id",
+            "image_link"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "image_id": {
+              "type": "string"
+            },
+            "image_link": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "image_id",
+            "image_link"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "message",
+    "data"
+  ]
+}

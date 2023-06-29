@@ -11,21 +11,21 @@ import starter.Utils.Users.PayloadUsers;
 public class DeleteUserStepDef {
     @Steps
     UsersAPI usersAPI;
-    AuthorizationUsers authorizationUsers;
+    AuthorizationUsers authorizationUsers = new AuthorizationUsers();
     PayloadUsers payloadUsers = new PayloadUsers();
 
     //Positive Case 1
-    @Given("Add user with {string} as full name, {string} as email, {string} as phone, and {string} as password")
-    public void addUserWithAsFullNameAsEmailAsPhoneAndAsPassword(String fullname, String email, String phone, String password) {
-        usersAPI.postUserUsers(payloadUsers.bodyRequestRegisterUsers(fullname, email, phone, password));
-    }
-    @When("Send request post delete user account")
-    public void sendRequestPostDeleteUserAccount() {
-        SerenityRest.when().post(UsersAPI.POST_REGISTER_USER_USERS);
-    }
-    @Given("Delete user account with {string} as email and {string} as password")
-    public void deleteUserAccountWithValidToken(String email, String password) {
-        String token = authorizationUsers.getTokenByCustomUsers(payloadUsers.bodyRequestLoginUsers(email, password));
+//    @Given("Add user with {string} as full name, {string} as email, {string} as phone, and {string} as password")
+//    public void addUserWithAsFullNameAsEmailAsPhoneAndAsPassword(String fullname, String email, String phone, String password) {
+//        usersAPI.postUserUsers(payloadUsers.bodyRequestRegisterUsers(fullname, email, phone, password));
+//    }
+//    @When("Send request post delete user account")
+//    public void sendRequestPostDeleteUserAccount() {
+//        SerenityRest.when().post(UsersAPI.POST_REGISTER_USER_USERS);
+//    }
+    @Given("Delete user account with valid token")
+    public void deleteUserAccountWithValidToken() {
+        usersAPI.deleteUserUsers(authorizationUsers.getTokenUserUsersKhususDelete());
     }
     @When("Send request delete user account")
     public void sendRequestDeleteUserAccount() {

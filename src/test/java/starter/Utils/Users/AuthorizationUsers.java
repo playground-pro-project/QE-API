@@ -18,11 +18,25 @@ public class AuthorizationUsers {
                 .post(UsersAPI.POST_LOGIN_USER_USERS);
 
         JsonPath jsonPathEvaluator = response.jsonPath();
-
-        return jsonPathEvaluator.get(Constants.DATA_TOKENS);
+        String token = jsonPathEvaluator.get("data.token");
+        return Constants.DATA_TOKENS = token;
+//        return jsonPathEvaluator.get(Constants.DATA_TOKENS);
     }
 
     public static String WRONG_TOKEN = "wrongToken";
+
+    public String getTokenUserUsersKhususDelete() {
+        File jsonRequest = new File(Constants.REQ_BODY_DIR+"LoginUsers/LoginValidUserForDeleteUsers.json");
+        Response response = SerenityRest.given()
+                .contentType(ContentType.JSON)
+                .body(jsonRequest)
+                .post(UsersAPI.POST_LOGIN_USER_USERS);
+
+        JsonPath jsonPathEvaluator = response.jsonPath();
+        String token = jsonPathEvaluator.get("data.token");
+        return Constants.DATA_TOKENS = token;
+//        return jsonPathEvaluator.get(Constants.DATA_TOKENS);
+    }
 
     public String getTokenByCustomUsers(String json) {
         Response response = SerenityRest.given()

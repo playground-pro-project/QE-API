@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "review_id": {
+              "type": "string"
+            },
+            "review": {
+              "type": "string"
+            },
+            "rating": {
+              "type": "number"
+            },
+            "user": {
+              "type": "object",
+              "properties": {
+                "user_id": {
+                  "type": "string"
+                },
+                "full_name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "user_id",
+                "full_name"
+              ]
+            }
+          },
+          "required": [
+            "review_id",
+            "review",
+            "rating",
+            "user"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "review_id": {
+              "type": "string"
+            },
+            "review": {
+              "type": "string"
+            },
+            "rating": {
+              "type": "integer"
+            },
+            "user": {
+              "type": "object",
+              "properties": {
+                "user_id": {
+                  "type": "string"
+                },
+                "full_name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "user_id",
+                "full_name"
+              ]
+            }
+          },
+          "required": [
+            "review_id",
+            "review",
+            "rating",
+            "user"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "message",
+    "data"
+  ]
+}

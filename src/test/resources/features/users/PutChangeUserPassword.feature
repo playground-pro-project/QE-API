@@ -4,7 +4,7 @@ Feature: PUT Change User Password
     Given Put change user password with valid token and valid body
     When Send request put change user password
     Then Should return status code 200
-    And Response body message contain "<message>"
+    And Response body message contain "Password updated successfully"
     And Validate json schema change user password with valid token and valid body
 
   @Test @NegativeCase @Users

@@ -15,7 +15,7 @@ import java.io.File;
 public class PutChangePasswordStepDef {
     @Steps
     UsersAPI usersAPI;
-    AuthorizationUsers authorizationUsers;
+    AuthorizationUsers authorizationUsers = new AuthorizationUsers();
 
     //Positive Case 1
     @Given("Put change user password with valid token and valid body")

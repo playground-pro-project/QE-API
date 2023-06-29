@@ -15,13 +15,13 @@ import java.io.File;
 public class PutChangePictureStepDef {
     @Steps
     UsersAPI usersAPI;
-    AuthorizationUsers authorizationUsers;
+    AuthorizationUsers authorizationUsers = new AuthorizationUsers();
 
     //Positive Case 1
     @Given("Change user profile picture with valid token and valid body")
     public void changeUserProfilePictureWithValidTokenAndValidBody() {
         File imageFile = new File(Constants.IMAGE_UPLOAD_REQUEST+"Kimmy.jpg");
-        usersAPI.putUpdateUserProfil(authorizationUsers.getTokenUserUsers(), imageFile);
+        usersAPI.putChangeProfilPictureUsers(authorizationUsers.getTokenUserUsers(), imageFile);
     }
     @When("Send request put change user profile picture")
     public void sendRequestPutChangeUserProfilePicture() {
@@ -37,14 +37,14 @@ public class PutChangePictureStepDef {
     @Given("Change user profile picture with wrong token and valid body")
     public void changeUserProfilePictureWithWrongTokenAndValidBody() {
         File imageFile = new File(Constants.IMAGE_UPLOAD_REQUEST+"Kimmy.jpg");
-        usersAPI.putUpdateUserProfil(AuthorizationUsers.WRONG_TOKEN, imageFile);
+        usersAPI.putChangeProfilPictureUsers(AuthorizationUsers.WRONG_TOKEN, imageFile);
     }
 
     //Negative Case 2
     @Given("Change user profile picture with valid token and invalid body")
     public void changeUserProfilePictureWithValidTokenAndInvalidBodyJson() {
         File imageFile = new File(Constants.CSV_INVALID_FILE_REQUEST+"InvalidFile.csv");
-        usersAPI.putUpdateUserProfil(authorizationUsers.getTokenUserUsers(), imageFile);
+        usersAPI.putChangeProfilPictureUsers(authorizationUsers.getTokenUserUsers(), imageFile);
     }
 
     //Negative Case 3
@@ -57,7 +57,7 @@ public class PutChangePictureStepDef {
     @Given("Change user profile picture with blank token and invalid body")
     public void changeUserProfilePictureWithBlankTokenAndInvalidBody() {
         File imageFile = new File(Constants.CSV_INVALID_FILE_REQUEST+"InvalidFile.csv");
-        usersAPI.putUpdateUserProfil(AuthorizationUsers.WRONG_TOKEN, imageFile);
+        usersAPI.putChangeProfilPictureUsers(AuthorizationUsers.WRONG_TOKEN, imageFile);
     }
 
     //Negative Case 5

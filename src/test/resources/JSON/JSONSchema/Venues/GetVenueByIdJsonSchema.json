@@ -1,0 +1,144 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "venue_id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "price": {
+          "type": "integer"
+        },
+        "category": {
+          "type": "string"
+        },
+        "distance": {
+          "type": "number"
+        },
+        "reviews": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "user_id": {
+                      "type": "string"
+                    },
+                    "full_name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "user_id",
+                    "full_name"
+                  ]
+                },
+                "review": {
+                  "type": "string"
+                },
+                "rating": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "user",
+                "review",
+                "rating"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "user_id": {
+                      "type": "string"
+                    },
+                    "full_name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "user_id",
+                    "full_name"
+                  ]
+                },
+                "review": {
+                  "type": "string"
+                },
+                "rating": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "user",
+                "review",
+                "rating"
+              ]
+            }
+          ]
+        },
+        "venue_images": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "image_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "image_url"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "image_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "image_url"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "venue_id",
+        "name",
+        "description",
+        "location",
+        "price",
+        "category",
+        "distance",
+        "reviews",
+        "venue_images"
+      ]
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message"
+  ]
+}
