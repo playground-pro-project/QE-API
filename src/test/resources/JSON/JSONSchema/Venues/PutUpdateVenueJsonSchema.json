@@ -2,31 +2,15 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "category": {
-      "type": "string"
+    "code": {
+      "type": "integer"
     },
-    "name": {
+    "message": {
       "type": "string"
-    },
-    "description": {
-      "type": "string"
-    },
-    "service_time": {
-      "type": "string"
-    },
-    "location": {
-      "type": "string"
-    },
-    "price": {
-      "type": "number"
     }
   },
   "required": [
-    "category",
-    "name",
-    "description",
-    "service_time",
-    "location",
-    "price"
+    "code",
+    "message"
   ]
 }

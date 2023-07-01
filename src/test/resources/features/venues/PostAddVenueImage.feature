@@ -3,7 +3,7 @@ Feature: POST Add Venue Image
   Scenario: Post add venue image with valid parameter, valid body, and valid token should success then return 200 response code
     Given Post add venue image with "VNE-M3PEOV0V" valid parameter, valid body, and valid token
     When Send request post add venue image
-    Then Should return status code 200
+    Then Should return status code 201
     And Response body message contain "venue image added successfully"
     And Validate json schema post add venue image
 

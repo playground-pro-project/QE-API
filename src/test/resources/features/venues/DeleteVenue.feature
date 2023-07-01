@@ -1,14 +1,14 @@
 Feature: DELETE Venue
   @Test @PositiveCase @Venues
   Scenario: Delete venue with valid parameter and valid token should success then return 200 response code
-    Given Delete venue with "VNE-9KEPNREZ" valid parameter and valid token
+    Given Delete venue with "VNE-FU488MO3" valid parameter and valid token
     When Send request delete venue
     Then Should return status code 200
     And Response body message contain "Successfully deleted a venue"
 
   @Test @NegativeCase @Venues
   Scenario: Delete venue with valid parameter and wrong token should failed then return 401 response code
-    Given Delete venue with "VNE-9KEPNREZ" valid parameter and wrong token
+    Given Delete venue with "VNE-FU488MO3" valid parameter and wrong token
     When Send request delete venue
     Then Should return status code 401
 
@@ -20,6 +20,6 @@ Feature: DELETE Venue
 
   @Test @NegativeCase @Venues
   Scenario: Delete venue with blank parameter and wrong token should failed then return 404 response code
-    Given Delete venue with "" blank parameter and wrong token
+    Given Delete venue with " " blank parameter and wrong token
     When Send request delete venue
-    Then Should return status code 404
+    Then Should return status code 401

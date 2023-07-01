@@ -11,31 +11,76 @@
         {
           "type": "object",
           "properties": {
-            "image_id": {
+            "venue_picture_id": {
               "type": "string"
             },
-            "image_link": {
+            "url": {
               "type": "string"
             }
           },
           "required": [
-            "image_id",
-            "image_link"
+            "venue_picture_id",
+            "url"
           ]
         },
         {
           "type": "object",
           "properties": {
-            "image_id": {
+            "venue_picture_id": {
               "type": "string"
             },
-            "image_link": {
+            "url": {
               "type": "string"
             }
           },
           "required": [
-            "image_id",
-            "image_link"
+            "venue_picture_id",
+            "url"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "venue_picture_id": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "venue_picture_id",
+            "url"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "venue_picture_id": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "venue_picture_id",
+            "url"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "venue_picture_id": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "venue_picture_id",
+            "url"
           ]
         }
       ]

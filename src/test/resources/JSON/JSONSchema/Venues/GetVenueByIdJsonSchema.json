@@ -11,44 +11,164 @@
     "data": {
       "type": "object",
       "properties": {
-        "venue_name": {
+        "venue_id": {
+          "type": "string"
+        },
+        "user_id": {
           "type": "string"
         },
         "category": {
           "type": "string"
         },
-        "address": {
+        "venue_name": {
           "type": "string"
         },
-        "booking_date": {
+        "description": {
           "type": "string"
         },
-        "start": {
+        "username": {
           "type": "string"
         },
-        "end": {
+        "service_time": {
           "type": "string"
         },
-        "payment_code": {
+        "location": {
           "type": "string"
         },
-        "payment_type": {
-          "type": "string"
+        "price": {
+          "type": "integer"
         },
-        "status": {
-          "type": "string"
+        "total_reviews": {
+          "type": "integer"
+        },
+        "average_rating": {
+          "type": "number"
+        },
+        "venue_pictures": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "venue_picture_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "venue_picture_url"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "venue_picture_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "venue_picture_url"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "venue_picture_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "venue_picture_url"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "venue_picture_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "venue_picture_url"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "venue_picture_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "venue_picture_url"
+              ]
+            }
+          ]
+        },
+        "reviews": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "review": {
+                  "type": "string"
+                },
+                "rating": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "review",
+                "rating"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "review": {
+                  "type": "string"
+                },
+                "rating": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "review",
+                "rating"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "review": {
+                  "type": "string"
+                },
+                "rating": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "review",
+                "rating"
+              ]
+            }
+          ]
         }
       },
       "required": [
-        "venue_name",
+        "venue_id",
+        "user_id",
         "category",
-        "address",
-        "booking_date",
-        "start",
-        "end",
-        "payment_code",
-        "payment_type",
-        "status"
+        "venue_name",
+        "description",
+        "username",
+        "service_time",
+        "location",
+        "price",
+        "total_reviews",
+        "average_rating",
+        "venue_pictures",
+        "reviews"
       ]
     }
   },
