@@ -4,5 +4,7 @@
   "description": "Deskripsi 14",
   "service_time": "07:45 - 23:00",
   "location": "Jalan Utama No.14",
-  "price": 1000014
+  "price": 1000014,
+  "lat": 14.567,
+  "lon": -14.65
 }
