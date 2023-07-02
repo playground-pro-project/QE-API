@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "venue_picture_id": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "venue_picture_id",
+            "url"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "venue_picture_id": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "venue_picture_id",
+            "url"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "venue_picture_id": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "venue_picture_id",
+            "url"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "venue_picture_id": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "venue_picture_id",
+            "url"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "venue_picture_id": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "venue_picture_id",
+            "url"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "message",
+    "data"
+  ]
+}

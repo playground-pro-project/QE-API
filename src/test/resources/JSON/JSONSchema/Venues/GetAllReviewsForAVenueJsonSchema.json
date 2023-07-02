@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "review_id": {
+              "type": "string"
+            },
+            "user_id": {
+              "type": "string"
+            },
+            "review": {
+              "type": "string"
+            },
+            "rating": {
+              "type": "number"
+            },
+            "user": {
+              "type": "object",
+              "properties": {
+                "fullname": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "fullname"
+              ]
+            }
+          },
+          "required": [
+            "review_id",
+            "user_id",
+            "review",
+            "rating",
+            "user"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "review_id": {
+              "type": "string"
+            },
+            "user_id": {
+              "type": "string"
+            },
+            "review": {
+              "type": "string"
+            },
+            "rating": {
+              "type": "number"
+            },
+            "user": {
+              "type": "object",
+              "properties": {
+                "fullname": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "fullname"
+              ]
+            }
+          },
+          "required": [
+            "review_id",
+            "user_id",
+            "review",
+            "rating",
+            "user"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "review_id": {
+              "type": "string"
+            },
+            "user_id": {
+              "type": "string"
+            },
+            "review": {
+              "type": "string"
+            },
+            "rating": {
+              "type": "number"
+            },
+            "user": {
+              "type": "object",
+              "properties": {
+                "fullname": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "fullname"
+              ]
+            }
+          },
+          "required": [
+            "review_id",
+            "user_id",
+            "review",
+            "rating",
+            "user"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "message",
+    "data"
+  ]
+}

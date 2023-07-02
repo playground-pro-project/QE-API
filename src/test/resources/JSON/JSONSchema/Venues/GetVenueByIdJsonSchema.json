@@ -1,0 +1,180 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer"
+    },
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "venue_id": {
+          "type": "string"
+        },
+        "user_id": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "venue_name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "service_time": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "price": {
+          "type": "integer"
+        },
+        "total_reviews": {
+          "type": "integer"
+        },
+        "average_rating": {
+          "type": "number"
+        },
+        "venue_pictures": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "venue_picture_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "venue_picture_url"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "venue_picture_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "venue_picture_url"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "venue_picture_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "venue_picture_url"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "venue_picture_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "venue_picture_url"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "venue_picture_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "venue_picture_url"
+              ]
+            }
+          ]
+        },
+        "reviews": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "review": {
+                  "type": "string"
+                },
+                "rating": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "review",
+                "rating"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "review": {
+                  "type": "string"
+                },
+                "rating": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "review",
+                "rating"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "review": {
+                  "type": "string"
+                },
+                "rating": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "review",
+                "rating"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "venue_id",
+        "user_id",
+        "category",
+        "venue_name",
+        "description",
+        "username",
+        "service_time",
+        "location",
+        "price",
+        "total_reviews",
+        "average_rating",
+        "venue_pictures",
+        "reviews"
+      ]
+    }
+  },
+  "required": [
+    "code",
+    "message",
+    "data"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "reservation": {
+    "venue_id": "VNE-8YOG40VG",
+    "check_in_date": 1,
+    "check_out_date": "2023-08-02 08:05:00"
+  },
+  "payment": {
+    "payment_type": "bca"
+  }
+}

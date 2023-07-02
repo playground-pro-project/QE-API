@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer"
+    },
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "venue_id": {
+              "type": "string"
+            },
+            "category": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "reservations": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "reservation_id": {
+                      "type": "string"
+                    },
+                    "check_in_date": {
+                      "type": "string"
+                    },
+                    "check_out_date": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "reservation_id",
+                    "check_in_date",
+                    "check_out_date"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "reservation_id": {
+                      "type": "string"
+                    },
+                    "check_in_date": {
+                      "type": "string"
+                    },
+                    "check_out_date": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "reservation_id",
+                    "check_in_date",
+                    "check_out_date"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "reservation_id": {
+                      "type": "string"
+                    },
+                    "check_in_date": {
+                      "type": "string"
+                    },
+                    "check_out_date": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "reservation_id",
+                    "check_in_date",
+                    "check_out_date"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "venue_id",
+            "category",
+            "name",
+            "reservations"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "code",
+    "message",
+    "data"
+  ]
+}
