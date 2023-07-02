@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer"
+    },
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "venue_id": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "venue_name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "service_time": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "price": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "venue_id",
+        "category",
+        "venue_name",
+        "description",
+        "username",
+        "service_time",
+        "location",
+        "price"
+      ]
+    }
+  },
+  "required": [
+    "code",
+    "message",
+    "data"
+  ]
+}
