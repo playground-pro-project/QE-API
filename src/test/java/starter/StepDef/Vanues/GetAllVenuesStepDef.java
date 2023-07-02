@@ -1,16 +1,16 @@
-package starter.StepDef.Venues;
+package starter.StepDef.Vanues;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
-import starter.PlaygroundPro.Venues;
+import starter.PlaygroundPro.Vanues;
 
 public class GetAllVenuesStepDef {
     @Steps
     static
-    Venues vanue;
+    Vanues vanue;
 
     @Given("Get all venues with valid token")
     public static void getAllVanues() throws Exception {

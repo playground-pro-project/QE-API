@@ -6,7 +6,6 @@ import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
 import starter.PlaygroundPro.Reviews;
-import starter.PlaygroundPro.Venues;
 
 public class DeleteReviewsStepDef {
     @Steps

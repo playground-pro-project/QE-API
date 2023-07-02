@@ -7,7 +7,7 @@ import starter.Utils.Token;
 
 import java.io.File;
 
-public class Venues {
+public class Vanues {
     static Token tokenUtils;
     public static String VANUES = Constants.BASE_URL + "/venues";
     public static String VANUES_SINGLE = Constants.BASE_URL + "/venues/{id}/availability";

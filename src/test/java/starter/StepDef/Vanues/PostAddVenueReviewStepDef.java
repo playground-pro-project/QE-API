@@ -1,18 +1,18 @@
-package starter.StepDef.Venues;
+package starter.StepDef.Vanues;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
-import starter.PlaygroundPro.Venues;
+import starter.PlaygroundPro.Vanues;
 import starter.Utils.Constants;
 
 import java.io.File;
 
 public class PostAddVenueReviewStepDef {
     @Steps
-    Venues venues;
+    Vanues venues;
 
     @Given("Post add venue review valid body with id {string}")
     public void postAddVenueReview(String id) throws Exception {
@@ -28,7 +28,7 @@ public class PostAddVenueReviewStepDef {
     @When("Send post add venue review")
     public void SendPostAddVenueReview() {
 
-        Response response = SerenityRest.when().post(Venues.VENUE_REVIEWS);
+        Response response = SerenityRest.when().post(Vanues.VENUE_REVIEWS);
         System.out.println(response.jsonPath().getString("message"));
     }
 

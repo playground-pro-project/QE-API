@@ -1,4 +1,4 @@
-package starter.StepDef.Venues;
+package starter.StepDef.Vanues;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -7,7 +7,7 @@ import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
-import starter.PlaygroundPro.Venues;
+import starter.PlaygroundPro.Vanues;
 import starter.Utils.Constants;
 
 import java.io.File;
@@ -15,7 +15,7 @@ import java.io.File;
 public class GetSingleVanuesAvailbilityStepDef {
     @Steps
     static
-    Venues venues;
+    Vanues venues;
 
     @Given("Get single vanues availbility with valid parameter id {string}")
     public void getSingleVanuesWithValidParameterId(String id) throws Exception {
@@ -24,7 +24,7 @@ public class GetSingleVanuesAvailbilityStepDef {
 
     @Given("Get single vanues availbility with invalid parameter id {string}")
     public static void getSingleVanuesWithInvalidParameterId(String id) throws Exception {
-        Venues.getSingleVanuesAvailbilitInvalidId(id);
+        Vanues.getSingleVanuesAvailbilitInvalidId(id);
     }
     @When("Send Get single vanues availbility")
     public static void sendGetSingleVanues() {
