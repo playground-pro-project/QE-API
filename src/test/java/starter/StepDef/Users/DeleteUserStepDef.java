@@ -15,14 +15,6 @@ public class DeleteUserStepDef {
     PayloadUsers payloadUsers = new PayloadUsers();
 
     //Positive Case 1
-//    @Given("Add user with {string} as full name, {string} as email, {string} as phone, and {string} as password")
-//    public void addUserWithAsFullNameAsEmailAsPhoneAndAsPassword(String fullname, String email, String phone, String password) {
-//        usersAPI.postUserUsers(payloadUsers.bodyRequestRegisterUsers(fullname, email, phone, password));
-//    }
-//    @When("Send request post delete user account")
-//    public void sendRequestPostDeleteUserAccount() {
-//        SerenityRest.when().post(UsersAPI.POST_REGISTER_USER_USERS);
-//    }
     @Given("Delete user account with valid token")
     public void deleteUserAccountWithValidToken() {
         usersAPI.deleteUserUsers(authorizationUsers.getTokenUserUsersKhususDelete());
